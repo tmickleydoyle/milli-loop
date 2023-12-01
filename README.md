@@ -1,4 +1,4 @@
-## [Add one millisecond after each loop and count by one](https://milli-loop.vercel.app)
+## Add one millisecond after each loop and count by one
 
 https://milli-loop.vercel.app
 
