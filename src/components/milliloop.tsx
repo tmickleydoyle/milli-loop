@@ -4,12 +4,15 @@ import React, { useState, useEffect } from 'react';
 
 export default function Milliloop() {
   const [currentMillisec, setCurrentMillisec] = useState(0);
+  const [showCurrentMillisec, setShowCurrentMillisec] = useState(true);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentMillisec((prevMillisec) => prevMillisec + 1);
+        setCurrentMillisec((prevMillisec) => prevMillisec + 1);
+        setShowCurrentMillisec(false);
     }, currentMillisec + 1);
 
+    setShowCurrentMillisec(true);
     return () => clearInterval(intervalId);
   }, [currentMillisec]);
 
@@ -21,16 +24,27 @@ export default function Milliloop() {
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               <span className="text-[#000000] inline-block" style={{ minWidth: '150px' }}>
                 milli-loop
-              </span>{' '}
-              <br />
-              <span className="text-[#bd1e59] inline-block">
-                {currentMillisec.toLocaleString()}
               </span>
             </h1>
-            <h3 className="text-lg text-[#000000]">
-                Increase the millisecond counter by 1 every millisecond.
-            </h3>
+            <div className="w-full h-full flex items-center justify-center">
+              <div
+                className={`w-64 h-32 bg-[#bd1e59] rounded-lg flex items-center justify-center text-white text-4xl font-bold`}
+              >
+                {currentMillisec.toLocaleString()}
+              </div>
+            </div>
+            <h3 className="text-lg text-[#000000]">Increment the time interval between counts by 1 millisecond.</h3>
           </div>
+        <div className="flex items-center justify-center text-center space-y-4">
+            <a
+                className="text-lg text-[#919191] hover:text-[#bd1e59]"
+                href="https://github.com/tmickleydoyle/milli-loop"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub Repo
+            </a>
+        </div>
         </div>
       </section>
     </div>
