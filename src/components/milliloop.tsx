@@ -20,13 +20,16 @@ export default function Milliloop() {
           <div className="flex flex-col items-center justify-center text-center space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               <span className="text-[#000000] inline-block" style={{ minWidth: '150px' }}>
-                Add one millisecond every interval
+                milli-loop
               </span>{' '}
               <br />
               <span className="text-[#bd1e59] inline-block">
-                {currentMillisec.toLocaleString()} milliseconds per interval
+                {currentMillisec.toLocaleString()}
               </span>
             </h1>
+            <h3 className="text-lg text-[#000000]">
+                Increase the millisecond counter by 1 every millisecond.
+            </h3>
           </div>
         </div>
       </section>
