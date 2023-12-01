@@ -20,11 +20,11 @@ export default function Milliloop() {
           <div className="flex flex-col items-center justify-center text-center space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
               <span className="text-[#000000] inline-block" style={{ minWidth: '150px' }}>
-                Add one millisecond after every loop
+                Add one millisecond every interval
               </span>{' '}
               <br />
               <span className="text-[#bd1e59] inline-block">
-                {currentMillisec.toLocaleString()}
+                {currentMillisec.toLocaleString()} milliseconds per interval
               </span>
             </h1>
           </div>
