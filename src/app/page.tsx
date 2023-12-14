@@ -1,7 +1,7 @@
-import Milliloop from "@/components/milliloop"
+import MilliloopChart from "@/components/milliloopchart"
 
 export default function Home() {
   return (
-    <Milliloop />
+    <MilliloopChart />
   )
 }
